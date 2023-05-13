@@ -64,8 +64,11 @@ function tieneEmail (usuario) {
   // Devuelve "true" si el usuario tiene un valor definido para la propiedad "email"
   // De lo contrario, devuelve "false"
   // Tu código:
-var tienePropiedad=usuario.hasowProperty("email");
-return tienePropiedad;
+if(usuario.email){
+  return true;
+}else{
+  return false;
+}
   
 }
 
@@ -74,8 +77,8 @@ function tienePropiedad (objeto, propiedad) {
   // "propiedad" es un string
   // De lo contrario, devuelve "false"
   // Tu código:
-  var tienePropiedad=objeto.hasowProperty(propiedad);
-return tienePropiedad;
+  return objeto.hasOwnProperty(propiedad);
+
 }
 
 function verificarPassword (usuario, password) {
